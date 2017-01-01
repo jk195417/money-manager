@@ -1,0 +1,10 @@
+<p id="notice"><%= notice %></p>
+<%= link_to 'Back', account_expenses_path, class: "btn btn-default", role: "button" %>
+<div class="btn-group pull-right">
+  <%= link_to 'Edit', edit_account_expense_path(@expense), class: "btn btn-primary", role: "button" %>
+  <%= link_to 'Delete', account_expense_path(@expense), method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger", role: "button" %>
+</div>
+<h1 class="text-center">Expense</h1>
+<div class="container">
+  <%= render 'account/components/details', resourse: @expense %>
+</div>

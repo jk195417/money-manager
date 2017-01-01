@@ -1,0 +1,11 @@
+<%= simple_form_for([:account,resourse]) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-group">
+    <%= f.input :money, label: "金額" %>
+    <%= f.input :label, label: "標籤" %>
+    <%= f.input :description, label: "描述" %>
+  </div>
+
+  <%= f.submit "Submit", class: "btn btn-primary", data: { disable_with: "Submitting..." }, role: "button" %>
+<% end %>

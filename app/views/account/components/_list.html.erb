@@ -1,0 +1,22 @@
+<ul class="list-group text-center">
+  <li class="list-group-item row">
+    <div class="col-sm-4">金額</div>
+    <div class="col-sm-4">類型</div>
+    <div class="col-sm-4">標籤</div>
+  </li>
+  <% resourses.each do |resourse| %>
+    <% if resourse.type == "Expense" %>
+      <%= link_to account_expense_path(resourse), class: "list-group-item row" do %>
+        <div class="col-sm-4"><%= resourse.money %></div>
+        <div class="col-sm-4"><%= "支出" %></div>
+        <div class="col-sm-4"><%= resourse.label %></div>
+      <% end %>
+    <% elsif resourse.type == "Income" %>
+      <%= link_to account_income_path(resourse), class: "list-group-item row" do %>
+        <div class="col-sm-4"><%= resourse.money %></div>
+        <div class="col-sm-4"><%= "收入" %></div>
+        <div class="col-sm-4"><%= resourse.label %></div>
+      <% end %>
+    <% end %>
+  <% end %>
+</ul>

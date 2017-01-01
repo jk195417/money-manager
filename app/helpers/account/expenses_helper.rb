@@ -1,0 +1,2 @@
+module Account::ExpensesHelper
+end

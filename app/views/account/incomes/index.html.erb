@@ -1,0 +1,4 @@
+<p id="notice"><%= notice %></p>
+<%= link_to 'New Income', new_account_income_path, class: "btn btn-primary pull-right", role: "button" %>
+<h1 class="text-center">Incomes</h1>
+<%= render 'account/components/list', resourses: @incomes %>
