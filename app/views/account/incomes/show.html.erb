@@ -1,7 +1,6 @@
-<p id="notice"><%= notice %></p>
-<%= link_to 'Back', account_incomes_path, class: "btn btn-default", role: "button" %>
+<%= render 'account/components/back_to_account'%>
 <div class="btn-group pull-right">
-  <%= link_to 'Edit', edit_account_income_path(@income), class: "btn btn-primary", role: "button" %>
+  <%= link_to 'Edit', edit_account_income_path(@income), class: "btn btn-default", role: "button" %>
   <%= link_to 'Delete', account_income_path(@income), method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger", role: "button" %>
 </div>
 <h1 class="text-center">Income</h1>

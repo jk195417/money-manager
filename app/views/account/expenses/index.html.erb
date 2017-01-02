@@ -1,4 +1,3 @@
-<p id="notice"><%= notice %></p>
-<%= link_to 'New Expense', new_account_expense_path, class: "btn btn-primary pull-right", role: "button" %>
+<%= render 'account/components/link'%>
 <h1 class="text-center">Expenses</h1>
 <%= render 'account/components/list', resourses: @expenses %>

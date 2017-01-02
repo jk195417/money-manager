@@ -1,0 +1,10 @@
+<div class="btn-group pull-left">
+  <%= link_to "查看所有", account_path, class: "btn btn-default", role: "button" %>
+  <%= link_to "查看支出", account_expenses_path, class: "btn btn-default", role: "button" %>
+  <%= link_to "查看收入", account_incomes_path, class: "btn btn-default", role: "button" %>
+</div>
+<div class="btn-group pull-right">
+  <%= link_to '新增收入', new_account_income_path, class: "btn btn-info", role: "button" %>
+  <%= link_to '新增支出', new_account_expense_path, class: "btn btn-warning", role: "button" %>
+</div>
+<br>

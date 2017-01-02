@@ -2,7 +2,7 @@ class Account::ExpensesController < ApplicationController
   before_action :set_expense, only: [:show, :edit, :update, :destroy]
 
   def index
-    @expenses = Expense.all
+    @expenses = Expense.all.order(id: :desc)
   end
 
   def show
@@ -18,7 +18,7 @@ class Account::ExpensesController < ApplicationController
   def create
     @expense = Expense.new(expense_params)
     if @expense.save
-      redirect_to account_expense_path(@expense), notice: 'Expense was successfully created.'
+      redirect_to account_path, notice: 'Expense was successfully created.'
     else
       render :new
     end
@@ -26,7 +26,7 @@ class Account::ExpensesController < ApplicationController
 
   def update
     if @expense.update(expense_params)
-      redirect_to account_expense_path(@expense), notice: 'Expense was successfully updated.'
+      redirect_to account_path, notice: 'Expense was successfully updated.'
     else
       render :edit
     end
@@ -34,7 +34,7 @@ class Account::ExpensesController < ApplicationController
 
   def destroy
     @expense.destroy
-    redirect_to account_expenses_url, notice: 'Expense was successfully destroyed.'
+    redirect_to account_path, notice: 'Expense was successfully destroyed.'
   end
 
   private

@@ -2,7 +2,7 @@ class Account::IncomesController < ApplicationController
   before_action :set_income, only: [:show, :edit, :update, :destroy]
 
   def index
-    @incomes = Income.all
+    @incomes = Income.all.order(id: :desc)
   end
 
   def show
@@ -18,7 +18,7 @@ class Account::IncomesController < ApplicationController
   def create
     @income = Income.new(income_params)
     if @income.save
-      redirect_to account_income_path(@income), notice: 'Income was successfully created.'
+      redirect_to account_path, notice: 'Income was successfully created.'
     else
       render :new
     end
@@ -26,7 +26,7 @@ class Account::IncomesController < ApplicationController
 
   def update
     if @income.update(income_params)
-      redirect_to account_income_path(@income), notice: 'Income was successfully updated.'
+      redirect_to account_path, notice: 'Income was successfully updated.'
     else
       render :edit
     end
@@ -34,7 +34,7 @@ class Account::IncomesController < ApplicationController
 
   def destroy
     @income.destroy
-    redirect_to account_incomes_url, notice: 'Income was successfully destroyed.'
+    redirect_to account_path, notice: 'Income was successfully destroyed.'
   end
 
   private
