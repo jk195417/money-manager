@@ -20,4 +20,24 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  edit: "Edit"
+  destroy: "Destroy"
+  submit: "Submit"
+  submiting: "Submitting..."
+  back: "Back"
+  sure?: 'Are you sure?'
+  record:
+    all: "收支一覽"
+    money: "金錢"
+    type: "收/支"
+    label: "標籤"
+    description: "描述"
+    created: "Record created"
+    updated: "Record updated"
+    destroyed: "Record destroyed"
+    new:
+      income: "New Income"
+      expense: "New Expense"
+    edit:
+      income: "Edit Income"
+      expense: "Edit Expense"

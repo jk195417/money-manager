@@ -1,0 +1,10 @@
+<div class="btn-group pull-left">
+  <%= link_to "查看所有", records_path, class: "btn btn-default" %>
+  <%= link_to "查看支出", records_path(q: {type_eq: "Expense" }), class: "btn btn-default" %>
+  <%= link_to "查看收入", records_path(q: {type_eq: "Income" }), class: "btn btn-default" %>
+</div>
+<div class="btn-group pull-right">
+  <%= link_to '新增收入', income_records_path, class: "btn btn-info" %>
+  <%= link_to '新增支出', expense_records_path, class: "btn btn-warning" %>
+</div>
+<br>

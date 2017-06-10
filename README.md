@@ -24,7 +24,7 @@ $ rails db:create
 $ rails db:migrate
 $ rails s
 ```
-前往 https://localhost:3000 查看
+前往 http://localhost:3000 查看
 ## 部屬
 
 ## 待增加功能

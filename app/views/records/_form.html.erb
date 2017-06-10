@@ -1,0 +1,10 @@
+<%= simple_form_for(record, as: :record, url: url) do |f| %>
+<%= f.error_notification %>
+<div class="form-group">
+  <%= f.input :money, label: t('record.money') %>
+  <%= f.hidden_field :type, value: record.type %>
+  <%= f.input :label, label: t('record.label') %>
+  <%= f.input :description, label: t('record.description') %>
+</div>
+<%= f.submit t('submit'), class: "btn btn-primary", data: { disable_with: t('submiting') } %>
+<% end %>
