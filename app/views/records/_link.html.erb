@@ -1,9 +1,14 @@
-<div class="btn-group pull-left">
+<div class="btn-group">
   <%= link_to "查看所有", records_path, class: "btn btn-default" %>
   <%= link_to "查看支出", records_path(q: {type_eq: "Expense" }), class: "btn btn-default" %>
   <%= link_to "查看收入", records_path(q: {type_eq: "Income" }), class: "btn btn-default" %>
 </div>
-<div class="btn-group pull-right">
+<%= form_tag analysis_path, method: :get, class: "form-inline" do %>
+<%= select_tag "year", options_for_select(2017..Date.today.year),class: "form-control", include_blank: true %>
+<%= select_tag "month", options_for_select(1..12),class: "form-control", include_blank: true %>
+<button type="submit" class="btn btn-default">分析</button>
+<% end %>
+<div class="btn-group">
   <%= link_to '新增收入', income_records_path, class: "btn btn-info" %>
   <%= link_to '新增支出', expense_records_path, class: "btn btn-warning" %>
 </div>
