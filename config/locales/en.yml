@@ -28,7 +28,7 @@ en:
   sure?: 'Are you sure?'
   record:
     all: "收支一覽"
-    money: "金錢"
+    money: "金額"
     type: "收/支"
     label: "標籤"
     description: "描述"
@@ -41,3 +41,5 @@ en:
     edit:
       income: "Edit Income"
       expense: "Edit Expense"
+    errors:
+      money_less_then_0: "金額必須 > 0"
