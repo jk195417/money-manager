@@ -8,10 +8,9 @@ Rails.application.routes.draw do
       get 'expense'
     end
   end
-  # scope :money_records do
-  #   resources :expenses
-  #   resources :incomes
-  # end
+
+  resource :analysis, only: [:show] do
+  end
 
   # 首頁
   root 'pages#index'
