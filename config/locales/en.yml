@@ -43,3 +43,5 @@ en:
       expense: "Edit Expense"
     errors:
       money_less_then_0: "金額必須 > 0"
+  analysis:
+    submit: '分析'
