@@ -1,3 +1,13 @@
 // "bootstrap-sprockets" must be imported before "bootstrap" and "bootstrap/variables"
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+.flex-item {
+  display: flex;
+}
+.ml-1{
+  margin-left: 3px;
+}
+.mr-1{
+  margin-right: 3px;
+}

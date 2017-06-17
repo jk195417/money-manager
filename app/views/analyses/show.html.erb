@@ -1,8 +1,12 @@
-<h1>Analyses#show</h1>
-<p>Find me in app/views/analyses/show.html.erb</p>
-<h2>all</h2>
-<%= render 'records/list', records: @records %>
-<h2>incomes</h2>
-<%= render 'records/list', records: @incomes %>
-<h2>expenses</h2>
-<%= render 'records/list', records: @expenses %>
+<%= link_to t('back'), records_path, class: "btn btn-default" %>
+<h1><%= between_time %></h1>
+<h2>支出</h2>
+總和:
+<%= (@incomes.map { |i| i.money }).sum %>
+<h2>收入</h2>
+總和:
+<%= (@expenses.map { |e| e.money }).sum %>
+
+<%# render 'records/list', records: @records %>
+<%# render 'records/list', records: @incomes %>
+<%# render 'records/list', records: @expenses %>
